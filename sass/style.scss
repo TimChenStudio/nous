@@ -1,0 +1,258 @@
+@import "./normalize";
+
+body {
+    min-height: 100vh;
+    font-family: 'Libre Baskerville', serif;
+    background: #5949FF ;
+    &:after {
+        content: '';
+        width: 100%;
+        height: 60px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(#fff, .7);
+        backdrop-filter: blur(2px);
+        border-bottom: 1px solid #fff;
+    }
+}
+header {
+    width: 100%;
+    height: 85px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    
+    .logo {
+        height: 70%;
+        display: flex;
+        align-items: center;
+        width: 95%;
+        position: relative;
+        margin: auto;
+        .icon {
+            height: 100%;
+            box-sizing: border-box;
+            padding: 5px;
+            border-radius: 10px;
+            background-color: rgba(#fff, 1);
+        }
+        img {
+            height: 100%;
+            width: auto;
+        }
+        h1 {
+            margin: 0 10px;
+            padding: 0;
+            font-size: 21px;
+        }
+    }
+    @media screen and (max-width: 568px) {
+        .logo {
+            h1 {
+                margin: 0 5px;
+                font-size: 19px;
+            }
+        }
+    }
+}
+
+.main-wrap {
+    width: 95%;
+    max-width: 1280px;
+    position: relative;
+    margin: auto;
+}
+.sq {
+    position: absolute;
+    width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    .sq-1,
+    .sq-2,
+    .sq-3 {
+        position: absolute;
+        display: block;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        &:after {
+            content: '';
+            display: block;
+        }
+    }
+    
+    .sq-1:after {
+        width: 60vw;
+        height: 60vw;
+        border-radius: 8vw;
+        background: linear-gradient(135deg, #C6FEFF 0%,#7AEBEC 100%);
+        transform: translateX(90%) translateY(-45%) rotate(135deg);
+    }
+    .sq-2:after {
+        width: 30vw;
+        height: 30vw;
+        border-radius: 4vw;
+        background: linear-gradient(135deg, #A5F5F7 0%,#006FFF 70%);
+        transform: translateX(-65%) translateY(85%) rotate(135deg);
+    }
+    .sq-3:after {
+        width: 20vw;
+        height: 20vw;
+        border-radius: 2vw;
+        background: #5949FF;
+        transform: translateX(-90%) translateY(55%) rotate(135deg);
+    }
+    @media screen and (max-width: 568px) {
+        .sq-1:after {
+            width: 80vw;
+            height: 80vw;
+            transform: translateX(70%) translateY(-35%) rotate(135deg); 
+        }
+        .sq-2:after {
+            width: 40vw;
+            height: 40vw;
+            transform: translateX(-65%) translateY(215%) rotate(135deg);
+        }
+        .sq-3:after {
+            width: 30vw;
+            height: 30vw;
+            transform: translateX(-90%) translateY(235%) rotate(135deg);
+        }
+    }
+}
+
+
+section {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    &.main-section {
+        height: 80vh;
+        background-color: #fff;
+        .main-wrap {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            .des {
+                width: 40%;
+                flex: 0 0 40%;
+                line-height: 1.6;
+                margin-left: 15%;
+                position: relative;
+                z-index: 5;
+            }
+        }
+        @media screen and (max-width: 568px) {
+            height: 50vh;
+            .main-wrap {
+                .des {
+                    width: 90%;
+                    flex: 0 0 90%;
+                    margin-left: 5%;
+                }
+            }
+        }
+    }
+    &.ftr-section {
+        color: #fff;
+        // background: linear-gradient(to bottom, #5949FF 30%,#7AEBEC 100%);
+        .bg {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 90%;
+            display: block;
+            background: linear-gradient(to bottom, #5949FF 0%,#7AEBEC 60%);
+            bottom: 0;
+            left: 0;
+        }
+        .main-wrap {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 80px 0;
+            position: relative;
+            flex-wrap: wrap;
+            .ftr-item {
+                width: 23%;
+                flex: 0 0 23%;
+                padding: 10px 10px 20px;
+                border-radius: 15px;
+                background: linear-gradient(135deg, rgba(#6655f6, .9) 0%, rgba(#998cf7, .9) 60%, rgba(#7776ff, .9) 100%);
+                box-shadow: 0 1px 0 rgba(#fff, .6) inset, 0 1px 8px rgba(#1e10a5, .6);
+                h2 {
+                    text-align: center;
+                    font-size: 18px;
+                }
+                img {
+                    width: 40%;
+                    max-width: 100px;
+                    display: block;
+                    margin: -30px auto 30px;
+                    filter: drop-shadow(0 1px 8px rgba(#1e10a5, .6));
+                }
+                ul {
+                    width: 80%;
+                    margin: auto;
+                    font-size: 15px;
+                    li {
+                        list-style-type: disc;
+                        margin: 8px 0;
+                        line-height: 1.4;
+                    }
+                }
+            }
+            &.cta {
+                flex-wrap: wrap;
+                h2 {
+                    width: 100%;
+                    text-align: center;
+                }
+                .addr {
+                    width: 100%;
+                    text-align: center;
+                    line-height: 1.5;
+                }
+                a {
+                    font-size: 19px;
+                    margin-top: 30px;
+                    padding: 15px 20px;
+                    text-decoration: none;
+                    color: #fff;
+                    border-radius: 100px;
+                    box-shadow: 0 0 0 2px #fff inset;
+                    transition: .2s ease;
+                    &:hover {
+                        box-shadow: 0 0 0 5px #fff inset;
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 568px) {
+            .main-wrap {
+                padding: 50px 0;
+                .ftr-item {
+                    width: 80%;
+                    flex: 0 0 80%;
+                    padding: 10px 10px 20px;
+                    border-radius: 15px;
+                    margin-bottom: 50px;
+                    h2 {
+                        font-size: 16px;
+                    }
+                    img {
+                        margin: -30px auto 30px;
+                    }
+                    ul {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nous & Company is a Taiwanese consulting firm that offers a plethora of services for SMB in the IT industry. We tailor strategies to solve your pain points.">
+    <title>NOUS & COMPANY LTD</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.paroller.min.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <div class="icon">
+            <img src="img/logo.svg" alt="">
+        </div>
+        <h1>NOUS & COMPANY LTD</h1>
+    </div>
+</header>
+<div class="sq">
+    <div class="sq-1"></div>
+    <div class="sq-2"></div>
+    <div class="sq-3"></div>
+</div>
+
+<section class="main-section">
+    <div class="main-wrap">
+        <div class="des">
+            <h2>About Us</h2>
+            <div class="desc">
+                Nous & Company is a Taiwanese consulting firm that offers a plethora of services for SMB in the IT industry.<br> 
+                We tailor strategies to solve your pain points.
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftr-section">
+    <div class="bg"></div>
+    <div class="main-wrap">
+        <div class="ftr-item">
+            <img src="img/ftr-1.png" alt="">
+            <h2>TALENT RECRUITMENT</h2>
+            <ul>
+                <li>Global Tech Recruitment</li>
+                <li>Recruitment Consulting</li>
+                <li>Recruitment Process</li>
+                <li>Outsourcing</li>
+                <li>Technical Interview</li>
+            </ul>
+        </div>
+        <div class="ftr-item">
+            <img src="img/ftr-2.png" alt="">
+            <h2>BIG DATA & ANALYTIC</h2>
+            <ul>
+                <li>Strategies for making business decision by ultilizing our latest AI and Big data Technology</li>
+                <li>Cyber Security</li>
+            </ul>
+        </div>
+        <div class="ftr-item">
+            <img src="img/ftr-3.png" alt="">
+            <h2>HR OUTSOURCING</h2>
+            <ul>
+                <li>Payroll</li>
+                <li>Learning & Development</li>
+                <li>Insurance Services</li>
+                <li>Audit and Wage-Claim Assistance </li> 
+                <li>Employement Termination</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-wrap cta">
+        <h2>Business Center</h2>
+        <div class="addr">2F No. 141, Sec 1, Keelung Rd., Xinyi Dist., Taipei City, Taiwan</div>
+        <a href="mailto:contact@nous.com.tw">contact@nous.com.tw</a>
+    </div>
+    
+</section>
+
+<script>
+    $( document ).ready(function() {
+        $('.sq-1').paroller({ factor: 0.8, factorXs: 0.3, type: 'foreground', direction: 'horizontal' });
+        $('.sq-2').paroller({ factor: 0.5, factorXs: 0.2, type: 'foreground', direction: 'vertical' });
+        $('.sq-3').paroller({ factor: 0.3, factorXs: 0.2, type: 'foreground', direction: 'vertical' });
+        $('.bg').paroller({ factor: -0.3, factorXs: -0.2, type: 'foreground', direction: 'vertical' });
+
+        var sqheight = $( document ).height();
+        $('.sq').css('height', sqheight);
+    });
+    
+    
+</script>
+    
+</body>
+</html>
